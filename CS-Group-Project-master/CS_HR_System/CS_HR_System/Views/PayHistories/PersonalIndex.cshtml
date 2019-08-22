@@ -1,0 +1,59 @@
+﻿@model IEnumerable<CS_HR_System.Models.PayHistory>
+
+@{
+    ViewBag.Title = "PersonalIndex";
+}
+
+<h2>My Pay History</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalaryBefore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SalaryAfter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HourlyBefore)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HourlyAfter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateApplied)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalaryBefore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.SalaryAfter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HourlyBefore)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HourlyAfter)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateApplied)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>

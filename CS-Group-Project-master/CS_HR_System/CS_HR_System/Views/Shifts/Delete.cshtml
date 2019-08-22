@@ -1,0 +1,88 @@
+﻿@model CS_HR_System.Models.Shift
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Shift</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Employee.Name)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Employee.Name)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.RequestedOff)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.RequestedOff)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.StartTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.StartTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.EndTime)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.EndTime)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Date)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Date)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PunchIn)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PunchIn)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.PunchOut)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.PunchOut)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+            @Html.AntiForgeryToken()
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>

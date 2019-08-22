@@ -1,0 +1,66 @@
+﻿@model CS_HR_System.Models.PayHistory
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PayHistory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaryBefore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaryBefore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SalaryAfter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SalaryAfter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HourlyBefore)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HourlyBefore)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HourlyAfter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HourlyAfter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DateApplied)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DateApplied)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

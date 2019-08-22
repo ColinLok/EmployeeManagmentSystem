@@ -1,0 +1,98 @@
+﻿@model CS_HR_System.Models.PayRoll
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>PayRoll</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Employee.Name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HourlyRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HourlyRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HoursWorked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HoursWorked)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OvertimeHoursWorked)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OvertimeHoursWorked)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TimeOffHours)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TimeOffHours)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TotalPaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TotalPaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TaxRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TaxRate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NetPaid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NetPaid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PayrollStartDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayrollStartDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PayrollEndDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PayrollEndDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,83 @@
+﻿@model IEnumerable<CS_HR_System.Models.PayRoll>
+
+@{
+    ViewBag.Title = "My Payrolls";
+}
+
+<h2>My Payrolls</h2>
+
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Employee.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HourlyRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HoursWorked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OvertimeHoursWorked)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TimeOffHours)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TotalPaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TaxRate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NetPaid)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayrollStartDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PayrollEndDate)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Employee.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HourlyRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.HoursWorked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OvertimeHoursWorked)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TimeOffHours)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TotalPaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaxRate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NetPaid)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PayrollStartDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PayrollEndDate)
+            </td>
+            <td>
+                @Html.ActionLink("Details", "Details", new { id = item.Id })
+            </td>
+        </tr>
+    }
+
+</table>
